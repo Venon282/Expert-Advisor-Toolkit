@@ -46,7 +46,6 @@ Product link : https://www.mql5.com/en/market/product/94130
   * [UpdateBuffer](#updatebuffer)
   * [UpdateCandles](#updatecandles)
 
-
 ## Installation
 
 ## Enumerations
@@ -58,10 +57,15 @@ Enumeration to specify the type of trailing stop to use
 
 #### Parameters :
 @enum FIXE Fixed trailing stop
+
 @enum MA_FOLLOWING Trailing stop following moving average
+
 @enum QUICK_SECURITY Trailing stop with quick security
+
 @enum MEAN_MOVING Trailing stop following mean moving
+
 @enum INCREASING Increasing trailing stop
+
 
 
 ### TRAILLING STOP CROSSING
@@ -71,11 +75,17 @@ Enumeration to specify the type of trailing stop to use for a crossing moving av
 
 #### Parameters :
 @enum FIXE_C Fixed trailing stop
+
 @enum MA1_FOLLOWING_C Trailing stop following moving average 1
+
 @enum MA2_FOLLOWING_C Trailing stop following moving average 2
+
 @enum QUICK_SECURITY_C Trailing stop with quick security
+
 @enum MEAN_MOVING_C Trailing stop following mean moving
+
 @enum INCREASING_C Increasing trailing stop
+
 
 
 ### HOURS
@@ -97,8 +107,11 @@ Enumeration to specify the type of positions to close
 
 #### Parameters :
 @enum SELL Sell positions only
+
 @enum BUY Buy positions only
+
 @enum ALL All positions (both Buy and Sell)
+
 
 
 ## Functions
@@ -106,37 +119,65 @@ Enumeration to specify the type of positions to close
 ### CandlesNumberSince
 
 #### Description :
+This function calculates the number of candles that have formed on a chart since a specified datetime.
 
 #### Parameters :
+@param since: datetime - The specified datetime to calculate the number of candles since.
+
 
 #### Return :
+@return long - Returns the number of candles that have formed on a chart since the specified datetime.
 
 
 ### CheckMoneyForTrade
 
 #### Description :
+This function checks if there is enough money in the account to execute a trade of a certain symbol and lot size.
 
 #### Parameters :
+@param symbol: string - The symbol of the trade to be checked.
+
+@param lot: double - The size of the trade in lots.
+
+@param type: ENUM_ORDER_TYPE - The type of the trade (buy or sell).
+
 
 #### Return :
+@return bool - Returns true if there is enough money in the account to execute the trade. Returns false if there is insufficient funds or if an error occurs.
 
 
 ### CloseFridayPositions
 
 #### Description :
+This function checks if it is Friday and if the specified hour and minute have passed, then closes all the positions with a specific magic number.
 
 #### Parameters :
+@param magic : long, The magic number of the expert advisor.
+
+@param h: An integer that represents the hour after which the positions are to be closed.
+
+@param m: An integer that represents the minute after which the positions are to be closed.
+
+@param close: A boolean that indicates whether to close positions on Friday or not.
+
 
 #### Return :
+@return: Returns true if positions are closed, otherwise false.
 
 
 ### ClosePositions
 
 #### Description :
+This function closes the positions of an expert advisor with a specific magic number and matching the specified type (buy, sell, or all).
 
 #### Parameters :
+@param magic : long, The magic number of the expert advisor.
+
+@param pos : POSITIONS, The type of the positions to be closed (buy, sell, or all).
+
 
 #### Return :
+@return bool, returns true if the positions are successfully closed, otherwise false.
 
 
 ### Comment 
@@ -146,92 +187,150 @@ This function print on the chart the daily profit/loss and total profit/loss inf
 
 #### Parameters :
 @param magic: long - The magic number of the EA.
+
 @param comment: bool - A flag indicating whether to output the information to the comment section.
+
 @param last_day: int - A variable to keep track of the previous day of the week.
+
 @param profit_total[5]: double - An array to store the total profit/loss information, including total profit, total swap, total commission, and total fee.
+
 @param profit_daily[5]: double - An array to store the daily profit/loss information, including total profit, total swap, total commission, and total fee.
+
 
 
 ### CountDigits
 
 #### Description :
+This function counts the number of digits in a given double value.
 
 #### Parameters :
+@param value: double - The double value to count digits from.
+
+@param precision_max: double - The maximum precision allowed for counting the digits. Default value is 8.
+
 
 #### Return :
+@return int - Returns the number of digits.
 
 
 ### DateDiff
 
 #### Description :
+This function calculates the difference between two dates.
 
 #### Parameters :
+@param a: datetime - The first date.
+
+@param b: datetime - The second date.
+
 
 #### Return :
+@return datetime - Returns the difference between the two dates.
 
 
 ### FirstTick
 
 #### Description :
+Permite to know if we are on a new candle/ first tick
 
 #### Parameters :
+@param candles: MqlRates[] - The array of candles to be checked.
+
 
 #### Return :
+@return bool - Returns true if the first candle in the array is the first tick of that candle. Returns false otherwise.
 
 
 ### GetLot
 
 #### Description :
+This function calculates the lot size to be traded based on the risk and the stop loss point.
 
 #### Parameters :
+@param risk: double - The percentage of the capital to risk in the trade.
+
+@param point: int - The stop loss point in pips.
+
 
 #### Return :
+@return double - Returns the calculated lot size.
 
 
 ### GetLot
 
 #### Description :
+This function calculates the lot size for a trade.
 
 #### Parameters :
+@param risk: double - The percentage of the account balance to risk on each trade.
+
+@param point: int - The stop loss in points.
+
+@param money_managment: bool - Flag indicating whether to use money management to determine the lot size.
+
+@param fixed_lot: double - The fixed lot size to use if money management is not used.
+
 
 #### Return :
+@return double - The lot size for the trade.
 
 
 ### MarketOpen
 
 #### Description :
-
-#### Parameters :
+This function checks if the current time falls within the trading hours of the symbol.
 
 #### Return :
+@return: bool, returns true if the current time falls within the trading hours of the symbol and false if it does not.
 
 
 ### MeanCandlesSize
 
 #### Description :
+The "MeanCandlesSize" function calculates the average of the absolute value of the difference between the open and close prices of candles.
 
 #### Parameters :
+@param candles: An array of MqlRates structure containing historical price data.
+
+@param nb: An integer representing the number of candles to be used in the calculation.
+
 
 #### Return :
+@return double: The mean size of the candles in points.
 
 
 ### Movement
 
 #### Description :
+The "Movement" function checks if the mean candle size is within the specified range (mean_sup and mean_inf).
 
 #### Parameters :
+@param candles: An array of MqlRates type that contains the candles information.
+
+@param mean_sup: An integer representing the upper limit of the mean candle size.
+
+@param nb_mean_sup: An integer representing the number of candles used to calculate the upper limit mean.
+
+@param mean_inf: An integer representing the lower limit of the mean candle size.
+
+@param nb_mean_inf: An integer representing the number of candles used to calculate the lower limit mean.
+
 
 #### Return :
+@return A boolean value that is true if the mean candle size is within the specified range, false otherwise.
 
 
 ### PeriodToInt
 
 #### Description :
+This function takes a time frame enumeration as input and returns the corresponding number of minutes for that time frame.
 
 #### Parameters :
+@param period: ENUM_TIMEFRAMES - The time frame enumeration to be converted to minutes.
+
 
 #### Return :
-
+@return int - The number of minutes that correspond to the input time frame. Returns -1 if the input time frame is unknown.
 
 ### Profit
 
@@ -240,9 +339,13 @@ This function updates the profit information for an expert advisor using a speci
 
 #### Parameters :
 @param magic: long - The magic number of the expert advisor.
+
 @param last_day: int & - The last day of the week that was processed.
+
 @param profit_total[]: double & - An array containing the total profit for each symbol being traded.
+
 @param profit_daily[]: double & - An array containing the daily profit for each symbol being traded.
+
 
 
 ### Profit daily
@@ -252,7 +355,9 @@ This function calculates the daily profit of an expert Advisor
 
 #### Parameters :
 @param magic: long - The magic number of the Expert Advisor.
+
 @param result[5]: double - An array that will store the daily profit and its components (total, profit, swap, commission, and fee).
+
 
 
 
@@ -263,26 +368,41 @@ This function calculates the total, profit, swap, commission, and fee since a ce
 
 #### Parameters :
 @param magic: long - The magic number of the EA.
+
 @param result[5]: double - An array to store the results, which are the total, profit, swap, commission, and fee.
+
 @param since: datetime - The starting date to consider.
+
 
 
 ### SLBuy
 
 #### Description :
+This function calculates the stop loss price for a buy trade.
 
 #### Parameters :
+@param bid: double - The bid price of the symbol to be traded.
+
+@param SL: long - The stop loss level in points.
+
 
 #### Return :
+@return double - Returns the stop loss price for a buy trade
 
 
 ### SLSell
 
 #### Description :
+This function calculates the stop loss price for a sell trade.
 
 #### Parameters :
+@param ask: double - The ask price of the symbol to be traded.
+
+@param SL: long - The stop loss level in points.
+
 
 #### Return :
+@return double - Returns the stop loss price for a sell trade
 
 
 ### Start day
@@ -302,6 +422,7 @@ This function returns the start of the day based on a given date (ex : 09/02/202
 #### Parameters :
 @param day: datetime - The date to calculate the start of the day from.
 
+
 #### Return :
 @return datetime - Returns the start of the day based on the given date.
 
@@ -309,29 +430,52 @@ This function returns the start of the day based on a given date (ex : 09/02/202
 ### TPBuy
 
 #### Description :
+This function calculates the take profit buy price for a given ask price and a given take profit value.
 
 #### Parameters :
+@param ask: double - The ask price of the symbol.
+
+@param TP: long - The take profit value in points.
+
 
 #### Return :
+@return double - Returns the take profit buy price.
 
 
 ### TPSell
 
 #### Description :
+This function calculates the take profit sell price for a given bid price and a given take profit value.
 
 #### Parameters :
+@param bid: double - The bid price of the symbol.
+
+@param TP: long - The take profit value in points.
+
 
 #### Return :
+@return double - Returns the take profit sell price.
 
 
 ### TradeDays
 
 #### Description :
+This function tells us if we can trade today.
 
 #### Parameters :
+@param monday: bool - Specifies if Monday is a valid trading day.
+
+@param tuesday: bool - Specifies if Tuesday is a valid trading day.
+
+@param wednesday: bool - Specifies if Wednesday is a valid trading day.
+
+@param thursday: bool - Specifies if Thursday is a valid trading day.
+
+@param friday: bool - Specifies if Friday is a valid trading day.
+
 
 #### Return :
-
+@return bool - Returns true if the specified day of the week is a valid trading day, false otherwise.
 
 ### TradeHours
 
@@ -340,10 +484,15 @@ This function allows us to know if we are in trading hours.
 
 #### Parameters :
 @param time_filter: bool - A boolean value indicating whether the time filter should be applied or not.
+
 @param start_hour: HOURS - The hour of the day at which the specified time range begins
+
 @param start_minute: MINUTES - The minute of the hour at which the specified time range begins
+
 @param end_hour: HOURS - The hour of the day at which the specified time range ends
+
 @param end_minute: MINUTES - The minute of the hour at which the specified time range ends
+
 
 #### Return :
 @return bool - Returns true if the current time falls within the specified time range and the time_filter is set to true, or if time_filter is set to false. Returns false otherwise.
@@ -351,80 +500,232 @@ This function allows us to know if we are in trading hours.
 ### TraillingStop
 
 #### Description :
+This function implements a trailing stop based on a specified type.
 
 #### Parameters :
+@param sl_type: TRAILLING_STOP - The type of trailing stop to use (FIXE, MA_FOLLOWING, QUICK_SECURITY, MEAN_MOVING, INCREASING).
+
+@param candles[]: MqlRates - An array of price data for a symbol.
+
+@param magic: long - The magic number of the expert advisor.
+
+@param sl: int - The trailing stop level.
+
+@param ma_buff[]: double - An array of moving average values.
+
+@param sl_min: int - The minimum trailing stop level.
+
+@param sl_quick_q: int - The trailing stop level for the quick security type.
+
+@param sl_start_q: int - The starting point for the trailing stop level for the quick security type.
+
+@param ratio: int - The ratio used in the mean moving type.
+
+@param mean_nb_candles: int - The number of candles used in the mean moving type.
+
+@param sl_i: int - The current trailing stop level for the increasing type.
+
+@param sl_start_i: int - The starting point for the trailing stop level for the increasing type.
+
+@param nb_candles_i: int - The number of candles used in the increasing type.
+
+@param sl_increase: int - The amount to increase the trailing stop level for the increasing type.
+
+@param max_increase: int - The maximum increase for the trailing stop level for the increasing type.
+
+@param min_decrease: int - The minimal decrease for the trailing stop level for the increasing type.
+
 
 #### Return :
+@return bool - Returns true if the trailing stop was executed successfully. Returns false otherwise.
 
 
 ### TraillingStop
 
 #### Description :
+The function TraillingStop applies a trailing stop to a trade order based on different criteria for a crossing moving average strategy.
 
 #### Parameters :
+@param sl_type: TRAILLING_STOP_CROSSING - Specifies the type of trailing stop to be applied.
+
+@param candles[]: MqlRates & - An array of MqlRates, contains historical price data for the symbol.
+
+@param magic: long - The magic number of the expert advisor.
+
+@param sl: int - The trailing stop level.
+
+@param ma1_buff[]: double & - An array of doubles, contains the moving average data for the symbol.
+
+@param ma2_buff[]: double & - An array of doubles, contains the moving average data for the symbol.
+
+@param sl_min: int - The minimum trailing stop level.
+
+@param sl_quick_q: int - The quick security trailing stop level.
+
+@param sl_start_q: int - The start of the quick security trailing stop.
+
+@param ratio: int - The ratio to be used in the mean moving trailing stop calculation.
+
+@param mean_nb_candles: int - The number of candles to be used in the mean moving trailing stop calculation.
+
+@param sl_i: int - The initial trailing stop level for the increasing trailing stop.
+
+@param sl_start_i: int - The start of the increasing trailing stop.
+
+@param nb_candles_i: int - The number of candles to be used in the increasing trailing stop calculation.
+
+@param sl_increase: int - The increase rate for the increasing trailing stop.
+
+@param max_increase: int - The maximum increase level for the increasing trailing stop.
+
+@param min_decrease: int - The minimal decrease for the trailing stop level for the increasing type.
+
 
 #### Return :
+@return bool - Returns true if the trailing stop has been applied successfully. Returns false otherwise.
 
 
 ### TraillingStopFixe
 
 #### Description :
+This function modifies stop loss levels for existing positions of the Expert Advisor with a fixed amount.
 
 #### Parameters :
+@param ask: double - The ask price of the symbol.
+
+@param bid: double - The bid price of the symbol.
+
+@param magic: long - The magic number of the Expert Advisor.
+
+@param sl: int - The fixed stop loss level to be set.
+
 
 #### Return :
+@return bool - Returns true if the modification is successful. Returns false if an error occurs.
 
 
 ### TraillingStopIncreasing
 
 #### Description :
+This function updates the stop loss of a position according to the current market price.
 
 #### Parameters :
+@param ask: double - The current market ask price.
+
+@param bid: double - The current market bid price.
+
+@param magic : long, The magic number of the expert advisor.
+
+@param sl: int - The initial stop loss value.
+
+@param sl_start: int - The minimum number of pips from the opening price that the stop loss must start to moved.
+
+@param nb_candles: int - The number of candles used to increase/decrease the stop loss.
+
+@param sl_increase: int - The amount by which the stop loss is increased/decrease for each candle.
+
+@param max_increase: int - The maximum amount by which the stop loss can be increased.
+
+@param min_increase: int - The minimal amount by which the stop loss can be decrease.
+
 
 #### Return :
+@return bool - Returns true if the stop loss of the position was successfully updated. Returns false if an error occurs.
 
 
 ### TraillingStopMa
 
 #### Description :
+This function modifies the stop loss of a position if the new stop loss is better than the old stop loss depending of a moving average.
 
 #### Parameters :
+@param ask: double - The current ask price.
+
+@param bid: double - The current bid price.
+
+@param magic: long - The magic number of the expert advisor.
+
+@param buff[]: double - The moving average buffer.
+
+@param sl_min: int - The minimum stop loss distance possible.
+
 
 #### Return :
+@return bool - Returns true if the stop loss is successfully modified. Returns false if an error occurs.
 
 
 ### TraillingStopMeanMoving
 
 #### Description :
+This function modifies the stop loss of an existing position based on the mean of a certain number of candles and a specified ratio.
 
 #### Parameters :
+@param ask: double - The current ask price.
+
+@param bid: double - The current bid price.
+
+@param magic : long, The magic number of the expert advisor.
+
+@param candles: MqlRates &candles[] - An array of candles used to calculate the mean.
+
+@param ratio: int - The ratio used to calculate the new stop loss on 100.
+
+@param mean_nb_candles: int - The number of candles used to calculate the mean.
+
 
 #### Return :
+@return bool - Returns true if the modification was successful. Returns false if there was an error or if the modification was unsuccessful.
 
 
 ### TraillingStopQuickSecurity
 
 #### Description :
+This function modifies the stop loss of an existing trade for securise it quickly.
 
 #### Parameters :
+@param ask: double - The current ask price.
+
+@param bid: double - The current bid price.
+
+@param magic: long - The magic number of the expert advisor.
+
+@param sl: int - The initial stop loss value.
+
+@param sl_start: int - The minimum number of pips from the opening price that the stop loss must start to moved.
+
 
 #### Return :
+@return bool - Returns true if the modification of the stop loss is successful. Returns false if there is an error modifying the stop loss.
 
 
 ### UpdateBuffer
 
 #### Description :
+This function updates an array buffer with data from a specified handle.
 
 #### Parameters :
+@param handle: int - The handle of the data source to be copied to the buffer.
+
+@param buf: double[] - The buffer to be updated with the data from the handle.
+
+@param size: int - The size of the buffer.
+
 
 #### Return :
+@return bool - Returns true if the buffer was successfully updated with data from the handle. Returns false if an error occurs.
 
 
 ### UpdateCandles
 
 #### Description :
+This function updates an array of candles with historical data of a specified symbol and time frame.
 
 #### Parameters :
+@param candles: MqlRates[] - The array of candles to be updated with the historical data.
+
+@param size: int - The size of the array of candles.
+
 
 #### Return :
+@return bool - Returns true if the candles array was successfully updated with the historical data. Returns false if an error occurs.
 
