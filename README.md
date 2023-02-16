@@ -53,80 +53,353 @@ Product link : https://www.mql5.com/en/market/product/94130
 
 ### TRAILLING STOP
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### TRAILLING STOP CROSSING
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### HOURS
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### MINUTES
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### POSITIONS
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ## Functions
 
 ### CandlesNumberSince
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### CheckMoneyForTrade
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### CloseFridayPositions
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### ClosePositions
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### Comment 
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### CountDigits
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### DateDiff
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### FirstTick
 
-### GetLot
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### GetLot
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
+### GetLot
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### MarketOpen
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### MeanCandlesSize
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### Movement
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### PeriodToInt
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### Profit
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### Profit daily
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### Profit since
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### SLBuy
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### SLSell
 
-### Start day
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### Start day
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
+### Start day
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### TPBuy
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### TPSell
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### TradeDays
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### TradeHours
 
-### TraillingStop
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### TraillingStop
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
+### TraillingStop
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### TraillingStopFixe
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### TraillingStopIncreasing
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### TraillingStopMa
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### TraillingStopMeanMoving
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
 
 ### TraillingStopQuickSecurity
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### UpdateBuffer
 
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
+
 ### UpdateCandles
+
+#### Description :
+
+#### Parameters :
+
+#### Return :
+
