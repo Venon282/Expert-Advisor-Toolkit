@@ -58,9 +58,13 @@ Enumeration to specify the type of trailing stop to use
 
 #### Parameters :
 @enum FIXE Fixed trailing stop
+
 @enum MA_FOLLOWING Trailing stop following moving average
+
 @enum QUICK_SECURITY Trailing stop with quick security
+
 @enum MEAN_MOVING Trailing stop following mean moving
+
 @enum INCREASING Increasing trailing stop
 
 
