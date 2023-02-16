@@ -5,8 +5,8 @@ Product link : https://www.mql5.com/en/market/product/94130
 ## Summary
 - [Installation](#installation)
 - [Enumerations](#enumerations)
-  * [TRAILLING_STOP](#trailling-stop)
-  * [TRAILLING_STOP_CROSSING](#trailling-stop-crossing)
+  * [TRAILLING STOP](#trailling-stop)
+  * [TRAILLING STOP CROSSING](#trailling-stop-crossing)
   * [HOURS](#hours)
   * [MINUTES](#minutes)
   * [POSITIONS](#positions)
@@ -53,7 +53,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 
 ### TRAILLING_STOP
 
-### TRAILLING_STOP_CROSSING
+### TRAILLING STOP CROSSING
 
 ### HOURS
 
