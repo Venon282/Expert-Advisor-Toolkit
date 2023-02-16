@@ -64,7 +64,6 @@ Enumeration to specify the type of trailing stop to use
 @enum QUICK_SECURITY Trailing stop with quick security
 
 @enum MEAN_MOVING Trailing stop following mean moving
-
 @enum INCREASING Increasing trailing stop
 
 
