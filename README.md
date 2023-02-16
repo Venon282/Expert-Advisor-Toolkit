@@ -54,46 +54,51 @@ Product link : https://www.mql5.com/en/market/product/94130
 ### TRAILLING STOP
 
 #### Description :
+Enumeration to specify the type of trailing stop to use
 
 #### Parameters :
-
-#### Return :
+@enum FIXE Fixed trailing stop
+@enum MA_FOLLOWING Trailing stop following moving average
+@enum QUICK_SECURITY Trailing stop with quick security
+@enum MEAN_MOVING Trailing stop following mean moving
+@enum INCREASING Increasing trailing stop
 
 
 ### TRAILLING STOP CROSSING
 
 #### Description :
+Enumeration to specify the type of trailing stop to use for a crossing moving average strategy
 
 #### Parameters :
-
-#### Return :
+@enum FIXE_C Fixed trailing stop
+@enum MA1_FOLLOWING_C Trailing stop following moving average 1
+@enum MA2_FOLLOWING_C Trailing stop following moving average 2
+@enum QUICK_SECURITY_C Trailing stop with quick security
+@enum MEAN_MOVING_C Trailing stop following mean moving
+@enum INCREASING_C Increasing trailing stop
 
 
 ### HOURS
 
 #### Description :
-
-#### Parameters :
-
-#### Return :
+This is an enumeration of hours. This enumeration includes 24 hours starting
 
 
 ### MINUTES
 
 #### Description :
-
-#### Parameters :
-
-#### Return :
+This is an enumeration that defines the different minutes in increments of 5.
 
 
 ### POSITIONS
 
 #### Description :
+Enumeration to specify the type of positions to close
 
 #### Parameters :
-
-#### Return :
+@enum SELL Sell positions only
+@enum BUY Buy positions only
+@enum ALL All positions (both Buy and Sell)
 
 
 ## Functions
