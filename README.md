@@ -15,7 +15,7 @@ Product link : https://www.mql5.com/en/market/product/94130
   * [CheckMoneyForTrade](#checkmoneyfortrade)
   * [CloseFridayPositions](#closefridaypositions)
   * [ClosePositions](#closepositions)
-  * [Comment_](#comment-)
+  * [Comment ](#comment-)
   * [CountDigits](#countdigits)
   * [DateDiff](#datediff)
   * [FirstTick](#firsttick)
@@ -26,12 +26,12 @@ Product link : https://www.mql5.com/en/market/product/94130
   * [Movement](#movement)
   * [PeriodToInt](#periodtoint)
   * [Profit](#profit)
-  * [Profit_daily](#profit-daily)
-  * [Profit_since](#profit-since)
+  * [Profit daily](#profit-daily)
+  * [Profit since](#profit-since)
   * [SLBuy](#slbuy)
   * [SLSell](#slsell)
-  * [Start_day](#start-day)
-  * [Start_day](#start-day-1)
+  * [Start day](#start-day)
+  * [Start day](#start-day-1)
   * [TPBuy](#tpbuy)
   * [TPSell](#tpsell)
   * [TradeDays](#tradedays)
@@ -51,7 +51,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 
 ## Enumerations
 
-### TRAILLING_STOP
+### TRAILLING STOP
 
 ### TRAILLING STOP CROSSING
 
@@ -71,7 +71,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 
 ### ClosePositions
 
-### Comment_
+### Comment 
 
 ### CountDigits
 
@@ -93,17 +93,17 @@ Product link : https://www.mql5.com/en/market/product/94130
 
 ### Profit
 
-### Profit_daily
+### Profit daily
 
-### Profit_since
+### Profit since
 
 ### SLBuy
 
 ### SLSell
 
-### Start_day
+### Start day
 
-### Start_day
+### Start day
 
 ### TPBuy
 
@@ -130,4 +130,3 @@ Product link : https://www.mql5.com/en/market/product/94130
 ### UpdateBuffer
 
 ### UpdateCandles
-
