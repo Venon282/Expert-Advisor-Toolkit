@@ -58,11 +58,8 @@ Enumeration to specify the type of trailing stop to use
 
 #### Parameters :
 @enum FIXE Fixed trailing stop
-
 @enum MA_FOLLOWING Trailing stop following moving average
-
 @enum QUICK_SECURITY Trailing stop with quick security
-
 @enum MEAN_MOVING Trailing stop following mean moving
 @enum INCREASING Increasing trailing stop
 
@@ -145,10 +142,14 @@ Enumeration to specify the type of positions to close
 ### Comment 
 
 #### Description :
+This function print on the chart the daily profit/loss and total profit/loss information of the Expert Advisor (EA).
 
 #### Parameters :
-
-#### Return :
+@param magic: long - The magic number of the EA.
+@param comment: bool - A flag indicating whether to output the information to the comment section.
+@param last_day: int - A variable to keep track of the previous day of the week.
+@param profit_total[5]: double - An array to store the total profit/loss information, including total profit, total swap, total commission, and total fee.
+@param profit_daily[5]: double - An array to store the daily profit/loss information, including total profit, total swap, total commission, and total fee.
 
 
 ### CountDigits
@@ -235,28 +236,35 @@ Enumeration to specify the type of positions to close
 ### Profit
 
 #### Description :
+This function updates the profit information for an expert advisor using a specified magic number.
 
 #### Parameters :
-
-#### Return :
+@param magic: long - The magic number of the expert advisor.
+@param last_day: int & - The last day of the week that was processed.
+@param profit_total[]: double & - An array containing the total profit for each symbol being traded.
+@param profit_daily[]: double & - An array containing the daily profit for each symbol being traded.
 
 
 ### Profit daily
 
 #### Description :
+This function calculates the daily profit of an expert Advisor
 
 #### Parameters :
+@param magic: long - The magic number of the Expert Advisor.
+@param result[5]: double - An array that will store the daily profit and its components (total, profit, swap, commission, and fee).
 
-#### Return :
 
 
 ### Profit since
 
 #### Description :
+This function calculates the total, profit, swap, commission, and fee since a certain date for trades.
 
 #### Parameters :
-
-#### Return :
+@param magic: long - The magic number of the EA.
+@param result[5]: double - An array to store the results, which are the total, profit, swap, commission, and fee.
+@param since: datetime - The starting date to consider.
 
 
 ### SLBuy
@@ -280,19 +288,22 @@ Enumeration to specify the type of positions to close
 ### Start day
 
 #### Description :
-
-#### Parameters :
+This function returns the start of the day in terms of the server's time (ex : 09/02/2023 00:00:00).
 
 #### Return :
+@return datetime - Returns the start of the day in terms of the server's time.
 
 
 ### Start day
 
 #### Description :
+This function returns the start of the day based on a given date (ex : 09/02/2023 00:00:00).
 
 #### Parameters :
+@param day: datetime - The date to calculate the start of the day from.
 
 #### Return :
+@return datetime - Returns the start of the day based on the given date.
 
 
 ### TPBuy
@@ -325,11 +336,17 @@ Enumeration to specify the type of positions to close
 ### TradeHours
 
 #### Description :
+This function allows us to know if we are in trading hours.
 
 #### Parameters :
+@param time_filter: bool - A boolean value indicating whether the time filter should be applied or not.
+@param start_hour: HOURS - The hour of the day at which the specified time range begins
+@param start_minute: MINUTES - The minute of the hour at which the specified time range begins
+@param end_hour: HOURS - The hour of the day at which the specified time range ends
+@param end_minute: MINUTES - The minute of the hour at which the specified time range ends
 
 #### Return :
-
+@return bool - Returns true if the current time falls within the specified time range and the time_filter is set to true, or if time_filter is set to false. Returns false otherwise.
 
 ### TraillingStop
 
