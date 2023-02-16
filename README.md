@@ -48,6 +48,9 @@ Product link : https://www.mql5.com/en/market/product/94130
 
 ## Installation
 
+- Add "EA Toolkit.mqh" to the MQL/Include/Trade folder
+- Include this file in your EA : #include <Trade\EA Toolkit.mqh>
+
 ## Enumerations
 
 ### TRAILLING STOP
