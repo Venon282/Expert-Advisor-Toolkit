@@ -18,9 +18,19 @@ Product link : https://www.mql5.com/en/market/product/94130
   * [Comment ](#comment-)
   * [CountDigits](#countdigits)
   * [DateDiff](#datediff)
+  * [Direction](#direction)
+  * [Direction](#direction-1)
   * [FirstTick](#firsttick)
   * [GetLot](#getlot)
   * [GetLot](#getlot-1)
+  * [GetMaxClose](#getmaxclose)
+  * [GetMaxOpen](#getmaxopen)
+  * [GetMaxPrice](#getmaxprice)
+  * [GetMaxSpread](#getmaxspread)
+  * [GetMinClose](#getminclose)
+  * [GetMinOpen](#getminopen)
+  * [GetMinPrice](#getminprice)
+  * [GetMinSpread](#getminspread)
   * [MarketOpen](#marketopen)
   * [MeanCandlesSize](#meancandlessize)
   * [Movement](#movement)
@@ -32,6 +42,13 @@ Product link : https://www.mql5.com/en/market/product/94130
   * [SLSell](#slsell)
   * [Start day](#start-day)
   * [Start day](#start-day-1)
+  * [TotalOperations](#totaloperations)
+  * [TotalOrders](#totalorders)
+  * [TotalOrdersBuy](#totalordersbuy)
+  * [TotalOrdersSell](#totalorderssell)
+  * [TotalPositions](#totalpositions)
+  * [TotalPositionsBuy](#totalpositionsbuy)
+  * [TotalPositionsSell](#totalpositionssell)
   * [TPBuy](#tpbuy)
   * [TPSell](#tpsell)
   * [TradeDays](#tradedays)
@@ -243,6 +260,27 @@ Permite to know if we are on a new candle/ first tick
 #### Return :
 @return bool - Returns true if the first candle in the array is the first tick of that candle. Returns false otherwise.
 
+### Direction
+
+#### Description :
+This function returns a order direction based on the specified position type.
+
+#### Parameters :
+@param type: ENUM_ORDER_TYPE - - The type of order to determine the direction for.
+
+#### Return :
+@return POSITIONS - Returns the position direction (BUY or SELL) associated with the given order type. If the order type is not recognized, it returns ALL.
+
+### Direction
+
+#### Description :
+This function returns a position direction based on the specified position type.
+
+#### Parameters :
+@param type: ENUM_POSITION_TYPE - The type of position to determine the direction for.
+
+#### Return :
+@return POSITIONS - Returns the direction of the position, either BUY, SELL, or ALL. If an unknown position type is passed, it prints an error message and returns ALL.
 
 ### GetLot
 
@@ -277,6 +315,109 @@ This function calculates the lot size for a trade.
 #### Return :
 @return double - The lot size for the trade.
 
+### GetMaxClose
+
+#### Description :
+This function returns the maximum close price for a given number of candles, as specified by the "from" and "to" parameters.
+
+#### Parameters :
+@param candles[]: MqlRates - An array of price data for a symbol.
+@param from: int - The index of the first candle to include in the search. Defaults to 1.
+@param to: int - The index of the last candle to include in the search. Defaults to 10.
+
+#### Return :
+@return double - The maximum close price for the specified range of candles.
+
+### GetMaxOpen
+
+#### Description :
+This function returns the maximum opening price for a given range of candles.
+
+#### Parameters :
+@param candles[]: MqlRates - An array of price data for a symbol.
+@param from: int - The index of the first candle to include in the range. Default is 1.
+@param to: int - The index of the last candle to include in the range. Default is 10.
+
+#### Return :
+@return double - The highest opening price within the specified range of candles, normalized to the number of decimal places in the current symbol's price.
+
+### GetMaxPrice
+
+#### Description :
+This function retrieves the maximum price value from an array of MqlRates structures for a given range of candles.
+
+#### Parameters :
+@param candles[]: MqlRates - An array of price data for a symbol.
+@param from: int - The index of the starting candle to retrieve the maximum price value from. Default is 1.
+@param to: int - The index of the ending candle to retrieve the maximum price value from. Default is 10.
+
+#### Return :
+@return double - The maximum price value for the given range of candles.
+
+### GetMaxSpread
+
+#### Description :
+This function calculates the maximum spread value within a given range of candles.
+
+#### Parameters :
+@param candles[]: MqlRates - an array of price data for a symbol.
+@param from: int - the index of the first candle in the range. Default value is 1.
+@param to: int - the index of the last candle in the range. Default value is 10.
+
+#### Return :
+@return double - the maximum spread value within the specified range of candles, normalized to the number of digits after the decimal point.
+
+### GetMinClose
+
+#### Description :
+This function returns the maximum close price for a given number of candles, as specified by the "from" and "to" parameters.
+
+#### Parameters :
+@param candles[]: MqlRates - An array of price data for a symbol.
+@param from: int - The index of the first candle to include in the search. Defaults to 1.
+@param to: int - The index of the last candle to include in the search. Defaults to 10.
+
+#### Return :
+@return double - The maximum close price for the specified range of candles.
+
+### GetMinOpen
+
+#### Description :
+This function finds the minimum opening price of a given range of candlesticks.
+
+#### Parameters :
+@param candles[]: MqlRates - An array of price data for a symbol.
+@param from: int - The start index of the range of candlesticks to be considered. Default is 1.
+@param to: int - The end index of the range of candlesticks to be considered. Default is 10.
+
+#### Return :
+@return double - Returns the minimum opening price of the given range of candlesticks.
+
+### GetMinPrice
+
+#### Description :
+This function calculates the minimum price value of an array of candles within a specified range.
+
+#### Parameters :
+@param candles[]: MqlRates - An array of price data for a symbol.
+@param from: int - The starting index of the range to calculate the minimum price value. Default value is 1.
+@param to: int - The ending index of the range to calculate the minimum price value. Default value is 10.
+
+#### Return :
+@return double - The minimum price value within the specified range.
+
+### GetMinSpread
+
+#### Description :
+This function retrieves the minimum spread value of a given symbol within a specified range of candles.
+
+#### Parameters :
+@param candles[]: MqlRates - An array of price data for a symbol.
+@param from: int - The start index of the candle range (default value is 1).
+@param to: int - The end index of the candle range (default value is 10).
+
+#### Return :
+@return double - The minimum spread value within the specified range of candles.
 
 ### MarketOpen
 
@@ -428,6 +569,84 @@ This function returns the start of the day based on a given date (ex : 09/02/202
 
 #### Return :
 @return datetime - Returns the start of the day based on the given date.
+
+
+### TotalOperations
+
+#### Description :
+This function returns the total number of operations (positions and orders) with a given magic number.
+
+#### Parameters :
+@param magic: long - The magic number used to filter the operations.
+
+#### Return :
+@return int - The total number of operations (positions and orders) with the specified magic number.
+
+### TotalOrders
+
+#### Description :
+This function calculates the total number of orders with a specified magic number.
+
+#### Parameters :
+@param magic: long - The magic number of the orders to be counted.
+
+#### Return :
+@return int - The total number of orders with the specified magic number.
+
+### TotalOrdersBuy
+
+#### Description :
+This function counts the total number of open buy orders that have a specific magic number.
+
+#### Parameters :
+@param magic: long - The magic number of the expert advisor.
+
+#### Return :
+@return int - The total number of open buy orders with the specified magic number.
+
+### TotalOrdersSell
+
+#### Description :
+This function calculates the total number of sell orders with a specific magic number.
+
+#### Parameters :
+@param magic: long - The magic number of the orders to be counted.
+
+#### Return :
+@return int - The total number of sell orders with the specified magic number.
+
+### TotalPositions
+
+#### Description :
+This function counts the total number of positions for a given magic number.
+
+#### Parameters :
+@param magic: long - The magic number to filter positions.
+
+#### Return :
+@return int - The total number of positions for the specified magic number.
+
+### TotalPositionsBuy
+
+#### Description :
+This function calculates the total number of open buy positions with a specific magic number in the account.
+
+#### Parameters :
+@param magic: long - The magic number of the expert advisor to filter positions.
+
+#### Return :
+@return int - The total number of open buy positions with the specified magic number.
+
+### TotalPositionsSell
+
+#### Description :
+This function calculates the total number of sell orders with a specific magic number.
+
+#### Parameters :
+@param magic: long - The magic number of the orders to be counted.
+
+#### Return :
+@return int - The total number of sell orders with the specified magic number.
 
 
 ### TPBuy
