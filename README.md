@@ -70,6 +70,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 
 ## Enumerations
 
+---
 ### TRAILLING STOP
 
 #### Description :
@@ -88,6 +89,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 
 
 
+---
 ### TRAILLING STOP CROSSING
 
 #### Description :
@@ -108,18 +110,21 @@ Product link : https://www.mql5.com/en/market/product/94130
 
 
 
+---
 ### HOURS
 
 #### Description :
 - This is an enumeration of hours. This enumeration includes 24 hours starting
 
 
+---
 ### MINUTES
 
 #### Description :
 - This is an enumeration that defines the different minutes in increments of 5.
 
 
+---
 ### POSITIONS
 
 #### Description :
@@ -136,6 +141,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 
 ## Functions
 
+---
 ### CandlesNumberSince
 
 #### Description :
@@ -149,6 +155,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return long - Returns the number of candles that have formed on a chart since the specified datetime.
 
 
+---
 ### CheckMoneyForTrade
 
 #### Description :
@@ -166,6 +173,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return bool - Returns true if there is enough money in the account to execute the trade. Returns false if there is insufficient funds or if an error occurs.
 
 
+---
 ### CloseFridayPositions
 
 #### Description :
@@ -185,6 +193,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return: Returns true if positions are closed, otherwise false.
 
 
+---
 ### ClosePositions
 
 #### Description :
@@ -200,6 +209,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return bool, returns true if the positions are successfully closed, otherwise false.
 
 
+---
 ### Comment 
 
 #### Description :
@@ -218,6 +228,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 
 
 
+---
 ### CountDigits
 
 #### Description :
@@ -233,6 +244,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return int - Returns the number of digits.
 
 
+---
 ### DateDiff
 
 #### Description :
@@ -248,6 +260,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return datetime - Returns the difference between the two dates.
 
 
+---
 ### FirstTick
 
 #### Description :
@@ -260,6 +273,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return bool - Returns true if the first candle in the array is the first tick of that candle. Returns false otherwise.
 
+---
 ### Direction
 
 #### Description :
@@ -271,6 +285,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return POSITIONS - Returns the position direction (BUY or SELL) associated with the given order type. If the order type is not recognized, it returns ALL.
 
+---
 ### Direction
 
 #### Description :
@@ -282,6 +297,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return POSITIONS - Returns the direction of the position, either BUY, SELL, or ALL. If an unknown position type is passed, it prints an error message and returns ALL.
 
+---
 ### GetLot
 
 #### Description :
@@ -297,6 +313,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return double - Returns the calculated lot size.
 
 
+---
 ### GetLot
 
 #### Description :
@@ -315,6 +332,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return double - The lot size for the trade.
 
+---
 ### GetMaxClose
 
 #### Description :
@@ -328,6 +346,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return double - The maximum close price for the specified range of candles.
 
+---
 ### GetMaxOpen
 
 #### Description :
@@ -341,6 +360,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return double - The highest opening price within the specified range of candles, normalized to the number of decimal places in the current symbol's price.
 
+---
 ### GetMaxPrice
 
 #### Description :
@@ -354,6 +374,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return double - The maximum price value for the given range of candles.
 
+---
 ### GetMaxSpread
 
 #### Description :
@@ -367,6 +388,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return double - the maximum spread value within the specified range of candles, normalized to the number of digits after the decimal point.
 
+---
 ### GetMinClose
 
 #### Description :
@@ -380,6 +402,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return double - The maximum close price for the specified range of candles.
 
+---
 ### GetMinOpen
 
 #### Description :
@@ -393,6 +416,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return double - Returns the minimum opening price of the given range of candlesticks.
 
+---
 ### GetMinPrice
 
 #### Description :
@@ -406,6 +430,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return double - The minimum price value within the specified range.
 
+---
 ### GetMinSpread
 
 #### Description :
@@ -419,6 +444,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return double - The minimum spread value within the specified range of candles.
 
+---
 ### MarketOpen
 
 #### Description :
@@ -428,6 +454,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return: bool, returns true if the current time falls within the trading hours of the symbol and false if it does not.
 
 
+---
 ### MeanCandlesSize
 
 #### Description :
@@ -443,6 +470,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return double: The mean size of the candles in points.
 
 
+---
 ### Movement
 
 #### Description :
@@ -464,6 +492,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return A boolean value that is true if the mean candle size is within the specified range, false otherwise.
 
 
+---
 ### PeriodToInt
 
 #### Description :
@@ -476,6 +505,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return int - The number of minutes that correspond to the input time frame. Returns -1 if the input time frame is unknown.
 
+---
 ### Profit
 
 #### Description :
@@ -492,6 +522,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 
 
 
+---
 ### Profit daily
 
 #### Description :
@@ -505,6 +536,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 
 
 
+---
 ### Profit since
 
 #### Description :
@@ -519,6 +551,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 
 
 
+---
 ### SLBuy
 
 #### Description :
@@ -534,6 +567,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return double - Returns the stop loss price for a buy trade
 
 
+---
 ### SLSell
 
 #### Description :
@@ -549,6 +583,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return double - Returns the stop loss price for a sell trade
 
 
+---
 ### Start day
 
 #### Description :
@@ -558,6 +593,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return datetime - Returns the start of the day in terms of the server's time.
 
 
+---
 ### Start day
 
 #### Description :
@@ -571,6 +607,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return datetime - Returns the start of the day based on the given date.
 
 
+---
 ### TotalOperations
 
 #### Description :
@@ -582,6 +619,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return int - The total number of operations (positions and orders) with the specified magic number.
 
+---
 ### TotalOrders
 
 #### Description :
@@ -593,6 +631,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return int - The total number of orders with the specified magic number.
 
+---
 ### TotalOrdersBuy
 
 #### Description :
@@ -604,6 +643,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return int - The total number of open buy orders with the specified magic number.
 
+---
 ### TotalOrdersSell
 
 #### Description :
@@ -615,6 +655,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return int - The total number of sell orders with the specified magic number.
 
+---
 ### TotalPositions
 
 #### Description :
@@ -626,6 +667,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return int - The total number of positions for the specified magic number.
 
+---
 ### TotalPositionsBuy
 
 #### Description :
@@ -637,6 +679,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return int - The total number of open buy positions with the specified magic number.
 
+---
 ### TotalPositionsSell
 
 #### Description :
@@ -649,6 +692,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return int - The total number of sell orders with the specified magic number.
 
 
+---
 ### TPBuy
 
 #### Description :
@@ -664,6 +708,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return double - Returns the take profit buy price.
 
 
+---
 ### TPSell
 
 #### Description :
@@ -679,6 +724,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return double - Returns the take profit sell price.
 
 
+---
 ### TradeDays
 
 #### Description :
@@ -699,6 +745,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return bool - Returns true if the specified day of the week is a valid trading day, false otherwise.
 
+---
 ### TradeHours
 
 #### Description :
@@ -719,6 +766,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 #### Return :
 - @return bool - Returns true if the current time falls within the specified time range and the time_filter is set to true, or if time_filter is set to false. Returns false otherwise.
 
+---
 ### TraillingStop
 
 #### Description :
@@ -762,6 +810,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return bool - Returns true if the trailing stop was executed successfully. Returns false otherwise.
 
 
+---
 ### TraillingStop
 
 #### Description :
@@ -807,6 +856,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return bool - Returns true if the trailing stop has been applied successfully. Returns false otherwise.
 
 
+---
 ### TraillingStopFixe
 
 #### Description :
@@ -826,6 +876,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return bool - Returns true if the modification is successful. Returns false if an error occurs.
 
 
+---
 ### TraillingStopIncreasing
 
 #### Description :
@@ -855,6 +906,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return bool - Returns true if the stop loss of the position was successfully updated. Returns false if an error occurs.
 
 
+---
 ### TraillingStopMa
 
 #### Description :
@@ -876,6 +928,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return bool - Returns true if the stop loss is successfully modified. Returns false if an error occurs.
 
 
+---
 ### TraillingStopMeanMoving
 
 #### Description :
@@ -899,6 +952,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return bool - Returns true if the modification was successful. Returns false if there was an error or if the modification was unsuccessful.
 
 
+---
 ### TraillingStopQuickSecurity
 
 #### Description :
@@ -920,6 +974,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return bool - Returns true if the modification of the stop loss is successful. Returns false if there is an error modifying the stop loss.
 
 
+---
 ### UpdateBuffer
 
 #### Description :
@@ -937,6 +992,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 - @return bool - Returns true if the buffer was successfully updated with data from the handle. Returns false if an error occurs.
 
 
+---
 ### UpdateCandles
 
 #### Description :
