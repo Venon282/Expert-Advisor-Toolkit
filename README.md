@@ -251,7 +251,7 @@ Product link : https://www.mql5.com/en/market/product/94130
 ### FirstTick
 
 #### Description :
-Permite to know if we are on a new candle/ first tick
+- Permite to know if we are on a new candle/ first tick
 
 #### Parameters :
 - @param candles: MqlRates[] - The array of candles to be checked.
@@ -950,4 +950,5 @@ Permite to know if we are on a new candle/ first tick
 
 #### Return :
 - @return bool - Returns true if the candles array was successfully updated with the historical data. Returns false if an error occurs.
+
 
