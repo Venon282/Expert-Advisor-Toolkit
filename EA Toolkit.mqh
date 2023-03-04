@@ -109,7 +109,6 @@ enum POSITIONS{
    BUY = 1,
    ALL = 2
 };
-
 //+------------------------------------------------------------------+
 //| EX5 imports                                                      |
 //+------------------------------------------------------------------+
@@ -154,7 +153,7 @@ int TotalPositionsBuy(long magic);
 int TotalPositionsSell(long magic);
 double TPBuy(double ask,long TP);
 double TPSell(double bid,long TP);
-bool TradeDays(bool monday,bool tuesday,bool wednesday,bool thursday,bool friday);
+bool TradeDays(bool monday,bool tuesday,bool wednesday,bool thursday,bool friday,bool saturday=false,bool sunday=false);
 bool TradeHours(bool time_filter,HOURS start_hour,MINUTES start_minute,HOURS end_hour,MINUTES end_minute);
 bool TraillingStop(TRAILLING_STOP sl_type,MqlRates &candles[],long magic,int sl,double &ma_buff[],int sl_min,int sl_quick_q,int sl_start_q,int ratio,int mean_nb_candles,int sl_i,int sl_start_i,int nb_candles_i,int sl_increase,int max_increase,int min_decrease);
 bool TraillingStop(TRAILLING_STOP_CROSSING sl_type,MqlRates &candles[],long magic,int sl,double &ma1_buff[],double &ma2_buff[],int sl_min,int sl_quick_q,int sl_start_q,int ratio,int mean_nb_candles,int sl_i,int sl_start_i,int nb_candles_i,int sl_increase,int max_increase,int min_decrease);
