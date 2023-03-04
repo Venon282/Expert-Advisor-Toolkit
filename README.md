@@ -739,6 +739,9 @@ Product link : https://www.mql5.com/en/market/product/94130
 
 - @param friday: bool - Specifies if Friday is a valid trading day.
 
+- @param saturday: bool - Specifies if Saturday is a valid trading day. Defaults to false.
+
+- @param sunday: bool - Specifies if Sunday is a valid trading day. Defaults to false.
 
 #### Return :
 - @return bool - Returns true if the specified day of the week is a valid trading day, false otherwise.
