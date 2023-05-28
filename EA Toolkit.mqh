@@ -109,6 +109,32 @@ enum POSITIONS{
    BUY = 1,
    ALL = 2
 };
+
+/*
+Description: Enumeration to specify the type of orders to close.
+@enum SELL_O Sell orders only
+@enum BUY_O Buy orders only
+@enum SELL_LIMIT Sell limit orders only
+@enum BUY_LIMIT Buy limit orders only
+@enum SELL_STOP Sell stop orders only
+@enum BUY_STOP Buy stop orders only
+@enum SELL_STOP_LIMIT Sell stop limit orders only
+@enum BUY_STOP_LIMIT Buy stop limit orders only
+@enum CLOSE_BY Close by orders only
+@enum ALL_O All orders (regardless of type)
+*/
+enum ORDERS{
+   SELL_O = 0,
+   BUY_O = 1,
+   SELL_LIMIT = 2,
+   BUY_LIMIT = 3,
+   SELL_STOP = 4,
+   BUY_STOP = 5,
+   SELL_STOP_LIMIT = 6,
+   BUY_STOP_LIMIT = 7,
+   CLOSE_BY = 8,
+   ALL_O= 9
+};
 //+------------------------------------------------------------------+
 //| EX5 imports                                                      |
 //+------------------------------------------------------------------+
@@ -116,15 +142,18 @@ enum POSITIONS{
 long CandlesNumberSince(datetime since);
 bool CheckMoneyForTrade(string symbol,double lot,ENUM_ORDER_TYPE type);
 bool CloseFridayPositions(long magic,HOURS h,MINUTES m,bool close=true);
+bool CloseOrders(long magic,int ORDERS);
 bool ClosePositions(long magic,POSITIONS pos);
 void Comment_(long magic,bool comment,double &profit_total[],double &profit_daily[]);
 int CountDigits(double value,double precision_max=8.000000);
 datetime DateDiff(datetime a,datetime b);
 POSITIONS Direction(ENUM_ORDER_TYPE type);
 POSITIONS Direction(ENUM_POSITION_TYPE type);
+bool EarlierEqThan(HOURS hour,MINUTES minute);
+bool EarlierThan(HOURS hour,MINUTES minute);
 bool FirstTick(MqlRates &candles[]);
-double GetLot(double risk,int point,bool money_managment,double fixed_lot);
 double GetLot(double risk,int point);
+double GetLot(double risk,int point,bool money_managment,double fixed_lot);
 double GetMaxClose(MqlRates &candles[],int from=1,int to=10);
 double GetMaxOpen(MqlRates &candles[],int from=1,int to=10);
 double GetMaxPrice(MqlRates &candles[],int from=1,int to=10);
@@ -133,18 +162,24 @@ double GetMinClose(MqlRates &candles[],int from=1,int to=10);
 double GetMinOpen(MqlRates &candles[],int from=1,int to=10);
 double GetMinPrice(MqlRates &candles[],int from=1,int to=10);
 double GetMinSpread(MqlRates &candles[],int from=1,int to=10);
+bool LaterEqThan(HOURS hour,MINUTES minute);
+bool LaterThan(HOURS hour,MINUTES minute);
 bool MarketOpen(void);
 double MeanCandlesSize(MqlRates &candles[],int nb);
+bool ModifyPosition(void);
 bool Movement(MqlRates &candles[],int mean_sup,int nb_mean_sup,int mean_inf,int nb_mean_inf);
+bool NewCandle(datetime &previous);
 int PeriodToInt(ENUM_TIMEFRAMES period);
 void Profit(long magic,int &last_day,double &capital_daily,double &profit_total[],double &profit_daily[]);
 void Profit_daily(long magic,double &result[]);
 void Profit_since(long magic,double &result[],datetime since);
 double SLBuy(double bid,long SL);
 double SLSell(double ask,long SL);
-datetime Start_day(datetime day);
 datetime Start_day(void);
+datetime Start_day(datetime day);
 int TotalOperations(long magic);
+int TotalOperationsBuy(long magic);
+int TotalOperationsSell(long magic);
 int TotalOrders(long magic);
 int TotalOrdersBuy(long magic);
 int TotalOrdersSell(long magic);
